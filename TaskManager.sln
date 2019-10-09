@@ -1,0 +1,116 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Web", "TaskManager.Web\TaskManager.Web.csproj", "{2CBA7699-53A3-4289-A973-E41089E72C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Domain", "TaskManager.Domain\TaskManager.Domain.csproj", "{327E419A-E161-43B1-9A6A-3284E7F42C2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Node", "TaskManager.Node\TaskManager.Node.csproj", "{A17F6E87-E455-4493-B4AE-3E11BD881F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Core", "TaskManager.Core\TaskManager.Core.csproj", "{DD7F3150-002B-4AD3-9FA3-695F52D88FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Demo", "TaskManager.Demo\TaskManager.Demo.csproj", "{8635DB01-9020-453D-9CA8-E20C2FCE37FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.MonitorTasks", "TaskManager.MonitorTasks\TaskManager.MonitorTasks.csproj", "{B8D9A1E9-F03B-44A5-ACDA-A6787CF3A5D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.WinService", "TaskManager.WinService\TaskManager.WinService.csproj", "{46DFD287-73E7-462A-A9C6-A53EC1FBBA63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Utils", "TaskManager.Utils\TaskManager.Utils.csproj", "{EFCDA480-BD82-4450-8DFF-951155AC85D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{5D0A19CE-E71D-48DD-8390-3F90E80DB03E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文档", "文档", "{299486FE-C4A1-4953-A3A8-623315F2E390}"
+	ProjectSection(SolutionItems) = preProject
+		文档\任务调度部署.docx = 文档\任务调度部署.docx
+		文档\设计实现分析.docx = 文档\设计实现分析.docx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{593AD778-E1ED-4ADE-AB97-FB37AC05DE3E}"
+	ProjectSection(SolutionItems) = preProject
+		文档\Demo\DemoTask.cs = 文档\Demo\DemoTask.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E45D1703-1589-460A-8CD9-B3E3DAAE6965}"
+	ProjectSection(SolutionItems) = preProject
+		文档\UI\任务列表.png = 文档\UI\任务列表.png
+		文档\UI\任务性能.png = 文档\UI\任务性能.png
+		文档\UI\分类列表.png = 文档\UI\分类列表.png
+		文档\UI\命令列表.png = 文档\UI\命令列表.png
+		文档\UI\新增任务.png = 文档\UI\新增任务.png
+		文档\UI\日志监控.png = 文档\UI\日志监控.png
+		文档\UI\用户管理.png = 文档\UI\用户管理.png
+		文档\UI\节点列表.png = 文档\UI\节点列表.png
+		文档\UI\节点性能.png = 文档\UI\节点性能.png
+		文档\UI\部署方式.png = 文档\UI\部署方式.png
+		文档\UI\部署方式2.png = 文档\UI\部署方式2.png
+		文档\UI\错误报警.png = 文档\UI\错误报警.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Install", "Install", "{AE2E98D0-A793-463C-9E8B-568E17928DF0}"
+	ProjectSection(SolutionItems) = preProject
+		文档\Install\SQL.txt = 文档\Install\SQL.txt
+		文档\Install\卸载.bat = 文档\Install\卸载.bat
+		文档\Install\安装.bat = 文档\Install\安装.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CBA7699-53A3-4289-A973-E41089E72C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBA7699-53A3-4289-A973-E41089E72C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBA7699-53A3-4289-A973-E41089E72C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBA7699-53A3-4289-A973-E41089E72C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{327E419A-E161-43B1-9A6A-3284E7F42C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{327E419A-E161-43B1-9A6A-3284E7F42C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{327E419A-E161-43B1-9A6A-3284E7F42C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{327E419A-E161-43B1-9A6A-3284E7F42C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17F6E87-E455-4493-B4AE-3E11BD881F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17F6E87-E455-4493-B4AE-3E11BD881F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17F6E87-E455-4493-B4AE-3E11BD881F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17F6E87-E455-4493-B4AE-3E11BD881F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD7F3150-002B-4AD3-9FA3-695F52D88FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD7F3150-002B-4AD3-9FA3-695F52D88FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD7F3150-002B-4AD3-9FA3-695F52D88FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD7F3150-002B-4AD3-9FA3-695F52D88FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8635DB01-9020-453D-9CA8-E20C2FCE37FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8635DB01-9020-453D-9CA8-E20C2FCE37FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8635DB01-9020-453D-9CA8-E20C2FCE37FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8635DB01-9020-453D-9CA8-E20C2FCE37FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D9A1E9-F03B-44A5-ACDA-A6787CF3A5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D9A1E9-F03B-44A5-ACDA-A6787CF3A5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D9A1E9-F03B-44A5-ACDA-A6787CF3A5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D9A1E9-F03B-44A5-ACDA-A6787CF3A5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DFD287-73E7-462A-A9C6-A53EC1FBBA63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DFD287-73E7-462A-A9C6-A53EC1FBBA63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DFD287-73E7-462A-A9C6-A53EC1FBBA63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DFD287-73E7-462A-A9C6-A53EC1FBBA63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFCDA480-BD82-4450-8DFF-951155AC85D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCDA480-BD82-4450-8DFF-951155AC85D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCDA480-BD82-4450-8DFF-951155AC85D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCDA480-BD82-4450-8DFF-951155AC85D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D0A19CE-E71D-48DD-8390-3F90E80DB03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0A19CE-E71D-48DD-8390-3F90E80DB03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0A19CE-E71D-48DD-8390-3F90E80DB03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0A19CE-E71D-48DD-8390-3F90E80DB03E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{593AD778-E1ED-4ADE-AB97-FB37AC05DE3E} = {299486FE-C4A1-4953-A3A8-623315F2E390}
+		{E45D1703-1589-460A-8CD9-B3E3DAAE6965} = {299486FE-C4A1-4953-A3A8-623315F2E390}
+		{AE2E98D0-A793-463C-9E8B-568E17928DF0} = {299486FE-C4A1-4953-A3A8-623315F2E390}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B60B463B-44FC-49E4-8C44-8505BF361BD5}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

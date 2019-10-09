@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A17F6E87-E455-4493-B4AE-3E11BD881F36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TaskManager.Node</RootNamespace>
+    <AssemblyName>TaskManager.Node</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=3.0.7.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.3.0.7\lib\net452\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\BaseCommand.cs" />
+    <Compile Include="CommandQueueProcessor.cs" />
+    <Compile Include="Commands\CommandFactory.cs" />
+    <Compile Include="Commands\ReStartTaskCommand.cs" />
+    <Compile Include="Commands\StartTaskCommand.cs" />
+    <Compile Include="Commands\StopTaskCommand.cs" />
+    <Compile Include="Commands\UninstallTaskCommand.cs" />
+    <Compile Include="Corn\CornFactory.cs" />
+    <Compile Include="GlobalConfig.cs" />
+    <Compile Include="NodeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeMain.Designer.cs">
+      <DependentUpon>NodeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemMonitor\BaseMonitor.cs" />
+    <Compile Include="SystemMonitor\NodeHeartBeatMonitor.cs" />
+    <Compile Include="SystemMonitor\PingTaskWebMonitor.cs" />
+    <Compile Include="SystemMonitor\TaskPerformanceMonitor.cs" />
+    <Compile Include="SystemMonitor\TaskRecoverMonitor.cs" />
+    <Compile Include="SystemMonitor\TaskStopMonitor.cs" />
+    <Compile Include="SystemRuntime\TaskJob.cs" />
+    <Compile Include="SystemRuntime\TaskPoolManager.cs" />
+    <Compile Include="SystemRuntime\TaskProvider.cs" />
+    <Compile Include="SystemRuntime\NodeTaskRuntimeInfo.cs" />
+    <Compile Include="Tools\AppDomainLoader.cs" />
+    <Compile Include="Tools\LogHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManager.Core\TaskManager.Core.csproj">
+      <Project>{dd7f3150-002b-4ad3-9fa3-695f52d88fcc}</Project>
+      <Name>TaskManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskManager.Domain\TaskManager.Domain.csproj">
+      <Project>{327e419a-e161-43b1-9a6a-3284e7f42c2b}</Project>
+      <Name>TaskManager.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskManager.Utils\TaskManager.Utils.csproj">
+      <Project>{efcda480-bd82-4450-8dff-951155ac85d1}</Project>
+      <Name>TaskManager.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskManager\TaskManager.csproj">
+      <Project>{5d0a19ce-e71d-48dd-8390-3f90e80db03e}</Project>
+      <Name>TaskManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NodeMain.resx">
+      <DependentUpon>NodeMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
